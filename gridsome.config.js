@@ -3,8 +3,11 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwind = require('tailwindcss')
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [{
+    use: "gridsome-plugin-tailwindcss",
+  }, ]
 }
