@@ -1,5 +1,5 @@
 <template>
-  <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow">
+  <li class="col-span-1 flex flex-col text-center bg-white shadow">
     <div class="flex-1 flex flex-col p-8">
       <img
         class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full"

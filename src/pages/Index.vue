@@ -1,13 +1,13 @@
 <template>
   <Layout>
-    <header class=" text-3xl text-center h-64 uppercase bg-red-500 text-white grid items-center"> o79 crew <br>
+    <header class=" text-3xl text-center h-64 uppercase bg-red-500 text-white grid items-center"> o79
 
       <!-- <input
         type="text"
         class="h-8  rounded placeholder-gray-400 px-3 py-1 text-gray-900 w-1/2 mx-auto outline-none focus:shadow text-lg"
         placeholder="Recherchez votre futur talent"
       > -->
-      <div class="mt-1 relative rounded shadow-sm w-1/3 mx-auto">
+      <div class="mt-1 relative rounded shadow-sm w-1/2 mx-auto">
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <svg
             class="h-5 w-5 text-gray-400"
@@ -23,8 +23,9 @@
         </div>
         <input
           id="query"
+          autofocus
           class="form-input block w-full pl-10 sm:text-sm sm:leading-5 h-8 text-gray-700 outline-none focus:shadow-sm"
-          placeholder="Dev, cuisinier, plombier..."
+          placeholder="Dev, cuisinier,..."
         />
       </div>
 
