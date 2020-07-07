@@ -1,5 +1,15 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enable: true,
+    content: [
+      './src/**/*.vue',
+      './src/**/*.css',
+      './src/**/*.js'
+    ],
+    // options: {
+    //   whitelist: ['mb-4', 'tracking-wide', 'leading-relaxed', 'text-5xl', 'font-extrabold', 'ml-6']
+    // }
+  },
   theme: {
     extend: {
       colors: {
