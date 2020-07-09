@@ -1,5 +1,6 @@
 <template>
-  <li class="col-span-1 flex flex-col text-center bg-white shadow">
+  <li class="col-span-1 flex flex-col text-center bg-white shadow relative">
+    <div class="absolute top-0 bg-red-500 text-white font-thin leading-6 px-2">Equipe o79</div>
     <div class="flex-1 flex flex-col p-8">
       <img
         class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full"
