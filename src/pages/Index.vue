@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <header class=" l text-center h-64 uppercase bg-red-500 text-white grid items-center">
+    <header class="text-center h-64 uppercase bg-red-500 text-white grid items-center">
 
-      <h1 class="o79">o79</h1>
+      <h1 class="o79">Communauté o79</h1>
 
       <!-- <input
         type="text"
@@ -26,6 +26,7 @@
         <input
           id="query"
           autofocus
+          v-model.trim="searchTerm"
           class="form-input block w-full pl-10 text-lg sm:leading-5 h-8 text-gray-700 outline-none focus:shadow-sm"
           placeholder="Dev, cuisinier,..."
         />
@@ -34,7 +35,7 @@
     </header>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 bg-gray-200">
       <user
-        v-for="{node} in $page.users.edges"
+        v-for="{node} in filteredUsers"
         :key="node.id"
         :user='node'
       />
@@ -47,8 +48,20 @@ import user from "../components/user";
 export default {
   name: "indexPage",
   components: { user },
+  data() {
+    return {
+      searchTerm: ""
+    };
+  },
   metaInfo: {
     title: "Communauté"
+  },
+  computed: {
+    filteredUsers() {
+      const searchTerm = this.searchTerm;
+      if (searchTerm.length < 3) return this.$page.users.edges;
+      return this.$search.search({ query: searchTerm, limit: 8 });
+    }
   }
 };
 </script>
@@ -76,10 +89,6 @@ query{
 
 <style lang="postcss" scoped>
 .o79 {
-  font-weight: bold;
-  font-size: 4.25rem;
-  line-height: 4.5rem;
-  color: #fff;
-  text-shadow: 3px 3px 0px #000000;
+  @apply font-bold leading-10 text-6xl;
 }
 </style>

@@ -8,6 +8,19 @@ const tailwind = require('tailwindcss')
 module.exports = {
   siteName: 'o79',
   plugins: [{
-    use: "gridsome-plugin-tailwindcss",
-  }, ]
+      use: "gridsome-plugin-tailwindcss",
+    },
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        searchFields: ['name', 'function', 'presentation', 'skills'],
+        collections: [{
+          typeName: 'User',
+          indexName: 'User',
+          fields: ['name', 'function', 'presentation', 'skills']
+        }]
+      }
+    }
+
+  ]
 }
