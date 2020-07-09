@@ -2,7 +2,7 @@
   <Layout>
     <header class="text-center h-64 uppercase bg-red-500 text-white grid items-center">
 
-      <h1 class="o79">Communauté o79</h1>
+      <h1 class="font-bold leading-1 sm:text-6xl text-3xl">Communauté o79</h1>
 
       <!-- <input
         type="text"
@@ -27,7 +27,7 @@
           id="query"
           autofocus
           v-model.trim="searchTerm"
-          class="form-input block w-full pl-10 text-lg sm:leading-5 h-8 text-gray-700 outline-none focus:shadow-sm"
+          class="form-input block w-full pl-10 text-lg sm:leading-5 h-10 text-gray-700 outline-none focus:shadow-lg"
           placeholder="Dev, cuisinier,..."
         />
       </div>
