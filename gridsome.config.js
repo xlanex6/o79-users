@@ -6,7 +6,7 @@
 const tailwind = require('tailwindcss')
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'o79',
   plugins: [{
     use: "gridsome-plugin-tailwindcss",
   }, ]

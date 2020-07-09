@@ -240,14 +240,14 @@ const db = [{
 module.exports = function (api) {
   api.loadSource((async actions => {
     const users = actions.addCollection('User')
-    // const raw = await axios.get('https://jsonplaceholder.typicode.com/users')
-    // users.addNode({
-    //   id: 1,
-    //   name: "alex",
-    //   data: raw
-    // })
+    const {
+      data
+    } = await axios.get('https://jsonplaceholder.typicode.com/users')
 
-    for (const user of db) {
+    const rawUser = await data
+
+
+    for (const user of rawUser) {
       users.addNode({
         id: user.id,
         name: user.name,
